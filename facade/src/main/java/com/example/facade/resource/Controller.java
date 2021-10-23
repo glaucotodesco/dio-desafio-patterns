@@ -24,17 +24,17 @@ public class Controller {
 
           final Mono<Model> model = client.getModel();
           final Mono<Info>  info  = client.getInfo();
+          final Mono<FacadeData> facade = Mono.just(new FacadeData());
 
-          final Mono<FacadeData> facade =  model.map(FacadeData::new)
-                                                .zipWith(info)
-                                                .map( t -> {
-                                                    t.getT1().setInfo(t.getT2());
-                                                    return t.getT1();
-                                                });
-      
-                                
-                
-          return facade;
+          return facade.zipWith(info).map( t -> {
+                                        t.getT1().setInfo(t.getT2());
+                                        return t.getT1();
+                                    })
+                        .zipWith(model).map( t -> {
+                                        t.getT1().setModel(t.getT2());
+                                        return t.getT1();
+                                    });
+                                    
     }
 
 }
