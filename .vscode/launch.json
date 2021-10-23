@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FacadeApplication<facade>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.facade.FacadeApplication",
+            "projectName": "facade",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Server1Application<server1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.server1.Server1Application",
+            "projectName": "server1",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Server2Application<server2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.server2.Server2Application",
+            "projectName": "server2",
+            "args": ""
+        }
+    ]
+}

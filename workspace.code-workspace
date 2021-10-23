@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "server1"
+		},
+		{
+			"name": "server2",
+			"path": "server2"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}
